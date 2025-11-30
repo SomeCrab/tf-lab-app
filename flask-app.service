@@ -7,6 +7,7 @@ User=ec2-user
 Group=ec2-user
 WorkingDirectory=/opt/app
 Environment="PATH=/opt/app/venv/bin"
+EnvironmentFile=/opt/app/.env
 ExecStart=/opt/app/venv/bin/flask --app app run --host=0.0.0.0 --port=5000
 Restart=on-failure
 
